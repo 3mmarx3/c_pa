@@ -1,234 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dream Box | Exclusive Rewards & Cash Giveaways</title>
-  <meta name="description" content="Join the Dream Box giveaway for a chance to win R 10,000,000 cash prizes, tech gadgets, and luxury gift cards. Quick verification and instant entry.">
-  <meta name="keywords" content="Dream Box, Cash Prizes, Win Money, Tech Giveaways, Gift Cards, Rewards Program">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link rel="stylesheet" href="./assets/css/main.css">
-
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fortune Gate</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
 
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '446535438338691');
-fbq('track', 'PageView');
-</script>
-
-<div class="site-wrapper">
-  <header class="top-navigation">
-    <div class="nav-content">
-      <div class="side-menu-icon"><span></span><span></span><span></span></div>
-      <div class="brand-name">Dream Box</div>
-      <div class="action-icons">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <div class="alert-bell"><i class="fa-solid fa-bell"></i></div>
-        <button class="auth-btn">LOGIN</button>
-      </div>
-    </div>
-  </header>
-
-  <div class="app-interface">
-    <div class="interface-header">
-      <button class="nav-back" onclick="moveBack()">←</button>
-      <div class="app-logo"></div>
-      <div class="step-indicator" id="stepDisplay">1/3</div>
-    </div>
-
-    <div class="d-flex">
-      <div id="countdownTimer">30</div>
-      <div class="track-outer"><div class="track-inner" id="trackFill"></div></div>
-    </div>
-
-    <div class="content-panel visible" id="step1">
-      <div class="reward-tag">
-        Exclusive Premium Opportunity!<br>
-        Current Jackpot: <span class="gold-text">R 10,000,000</span> Available Now!
-      </div>
-      <h2 class="prompt-title">Question 1 of 3:Where are you from?</h2>
-      <div class="options-grid">
-        <button onclick="moveNext()">South Africa</button>
-        <button onclick="moveNext()">Angola</button>
-        <button onclick="moveNext()">Ghana</button>
-      </div>
-    </div>
-
-    <div class="content-panel" id="step2">
-      <h2 class="prompt-title">Question 2 of 3: What type of assistance do you want?</h2>
-      <div class="options-grid">
-        <button onclick="moveNext()">🏠 Financial assistance</button>
-        <button onclick="moveNext()">💊 Medical assistance</button>
-        <button onclick="moveNext()">🎓 Education assistance</button>
-      </div>
-    </div>
-
-    <div class="content-panel" id="step3">
-      <h2 class="prompt-title">How did you hear about Dream Box for the first time?</h2>
-      <div class="options-grid">
-        <button onclick="completeProcess()">Facebook or Instagram</button>
-        <button onclick="completeProcess()">Friends or family</button>
-        <button onclick="completeProcess()">I just discovered it online</button>
-      </div>
-    </div>
-    
-    <div class="status-overlay" id="waitStage1">
-      <div class="status-msg">Analyzing your answers...</div>
-      <div class="spinner-ring"></div>
-    </div>
-
-    <div class="status-overlay" id="waitStage2">
-      <div class="status-msg">Matching with available prizes...</div>
-      <div class="spinner-ring"></div>
-    </div>
-
-    <div class="success-panel" id="winResult">
-      <h2 class="prompt-title">Verification Successful!</h2>
-      <div class="success-desc">
-        Your chance of being selected is 97%! You’re almost there keep this page open. Click<strong> “CLAIM YOUR CHECK”</strong>below and create your account and complete the required activation step to finalize your entry<br>
-        We’ll contact you shortly after submission — don’t miss your moment!
-      </div>
-              <a id="finalLink" href="https://dreamjackpot.it.com/click">
-                   <button class="main-cta">
-        CLAIM YOUR CHECK NOW
-      </button>
-              </a>
-
-   
-    </div>
-  </div>
-</div>
-
-<p style="font-size: 14px; line-height: 1.8; font-weight: 500; color: #ffffff; text-align: center; margin: 14px auto; animation: softAlert 1.5s infinite;">
-  Important Note: To be eligible to participate, participants must complete registration — just like all previous participants..
-</p>
-
-<div id="winner-toast-premium">
-    <div class="avatar-container">
-        <div class="rotating-border"></div>
-        <div class="avatar-frame">
-            <img id="toast-avatar" src="your-image-url.jpg" alt="avatar">
+    <div id="live-winner-notification">
+        <div style="position: relative; display: flex; align-items: center; justify-content: center; flex: 0 0 auto;">
+            <div id="shine-orbit"></div>
+            <div style="position: relative; width: 48px; height: 48px; border-radius: 50%; overflow: hidden; border: 2px solid #07142d; z-index: 2;">
+                <img id="notification-profile" src="" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: column; flex-grow: 1; min-width:0;">
+            <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 2px;">
+                <span style="width: 7px; height: 7px; background: #00ff88; border-radius: 50%; box-shadow: 0 0 8px #00ff88;"></span>
+                <span id="notification-label" style="font-size: 10px; font-weight: 800; color: rgba(0, 242, 254, 0.7); text-transform: uppercase; letter-spacing: 1.2px;">Live Entry</span>
+            </div>
+            <div style="font-size: 16px; font-weight: 700; display: flex; align-items: center; gap: 6px; flex-wrap: nowrap; min-width:0;">
+                <span id="notification-username" style="color: #ffffff; flex: 0 1 auto; min-width: 0; max-width: 42%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">---</span>
+                <span style="color: rgba(255,255,255,0.78); font-size: 14px; font-weight: 600; white-space: nowrap; flex: 0 0 auto;">won</span>
+                <span id="notification-prize" style="flex: 0 0 auto; color: #00ff88; font-size: 13px; font-weight: 800; background: rgba(0,255,136,0.12); padding: 2px 10px; border-radius: 30px; border: 1px solid rgba(0,255,136,0.2); white-space: nowrap;">---</span>
+            </div>
+            <div id="notification-info" style="margin-top: 2px; font-size: 12px; color: rgba(255,255,255,0.78); white-space: nowrap; overflow:hidden; text-overflow: ellipsis;">---</div>
         </div>
     </div>
 
-    <div class="toast-content">
-        <div class="status-badge">
-            <span class="online-dot"></span>
-            <span class="status-text">Live Activity</span>
+    <header class="global-topbar">
+        <div class="topbar-inner">
+            <div class="hamburger-lines"><span></span><span></span><span></span></div>
+            <div class="logo-text"></div>
+            <div class="header-actions">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="notification-indicator"><i class="fa-solid fa-bell"></i></div>
+                <button class="signin-button">LOGIN</button>
+            </div>
         </div>
-        
-        <div class="winner-info">
-            <span id="toast-name">Username</span>
-            <span class="won-text">won</span>
-            <span id="toast-amount">$500.00</span>
-        </div>
-        
-        <div id="toast-sub">Jackpot Winner!</div>
-    </div>
-</div>
+    </header>
 
-<script>
-  let activeIndex = 1;
-const maxSteps = 3;
-const $ = (id) => document.getElementById(id);
+    <section class="central-container">
+        <div class="emblem-background"></div>
 
-function refreshUI() {
-    if ($('trackFill')) $('trackFill').style.width = (activeIndex / maxSteps * 100) + '%';
-    if ($('stepDisplay')) $('stepDisplay').textContent = `${activeIndex}/${maxSteps}`;
-}
+        <header class="hero-header" id="countdown-header">
+            <div style="margin-bottom:24px ; text-align:center; color:#ffffff; font-size:20px; font-weight:700;">
+                Imagine winning R1,500,000 today!
+            </div>
+        </header>
 
-function moveNext() {
-    if (activeIndex < maxSteps) {
-        $(`step${activeIndex}`).classList.remove('visible');
-        activeIndex++;
-        $(`step${activeIndex}`).classList.add('visible');
-        refreshUI();
-    }
-}
+        <main class="primary-panel" id="core-content-area">
+            <div id="flow-container">
+                <article id="screen-a" class="question-block" style="display: block;">
+                    <span class="progress-label">Question 1 of 3</span>
+                    <h2 class="question-heading">Your first move with R1,500,000?</h2>
+                    <div class="options-container">
+                        <button class="option-button" data-target="b">Buy a luxury car</button>
+                        <button class="option-button" data-target="b">Dream House</button>
+                        <button class="option-button" data-target="b">Dream Vacation</button>
+                    </div>
+                </article>
 
-function moveBack() {
-    ['waitStage1', 'waitStage2', 'winResult'].forEach(id => {
-        const el = $(id);
-        if (el) el.classList.remove('active');
-    });
-    document.querySelectorAll('.content-panel').forEach(s => s.classList.remove('visible'));
-    if (activeIndex > 1) activeIndex--;
-    $(`step${activeIndex}`).classList.add('visible');
-    refreshUI();
-}
+                <article id="screen-b" class="question-block" style="display: none;">
+                    <span class="progress-label">Question 2 of 3</span>
+                    <h2 class="question-heading">What would R1,500,000 change for you immediately?</h2>
+                    <div class="options-container">
+                        <button class="option-button" data-target="c">Secure my family</button>
+                        <button class="option-button" data-target="c">No more debts</button>
+                        <button class="option-button" data-target="c">Start my business</button>
+                    </div>
+                </article>
 
-function completeProcess() {
-    if ($('step3')) $('step3').classList.remove('visible');
-    if ($('waitStage1')) $('waitStage1').classList.add('active');
-    setTimeout(() => {
-        if ($('waitStage1')) $('waitStage1').classList.remove('active');
-        if ($('waitStage2')) $('waitStage2').classList.add('active');
-        setTimeout(() => {
-            if ($('waitStage2')) $('waitStage2').classList.remove('active');
-            if ($('winResult')) $('winResult').classList.add('active');
-            if (typeof confetti === 'function') confetti({ particleCount: 200, spread: 100, origin: { y: 0.6 } });
-        }, 3000);
-    }, 2500);
-}
+                <article id="screen-c" class="question-block" style="display: none;">
+                    <span class="progress-label">Question 3 of 3</span>
+                    <h2 class="question-heading">Ready to start playing and unlock your first game?</h2>
+                    <div class="options-container">
+                        <button class="option-button" data-target="d">YES, I'm ready!</button>
+                        <button class="option-button" data-target="d">See how to play!</button>
+                    </div>
+                </article>
 
-let timeLeft = 60;
-const timer = setInterval(() => {
-    if (timeLeft <= 0) {
-        clearInterval(timer);
-        window.location.href = $('finalLink') ? $('finalLink').href : "https://dreamjackpot.it.com/click";
-    } else {
-        if ($('countdownTimer')) $('countdownTimer').textContent = timeLeft--;
-    }
-}, 1000);
+                <article id="screen-d" class="question-block" style="display: none;">
+                    <div class="countdown-ring"><span id="remaining-seconds">90</span></div>
+                    <h2 class="celebration-title">Congratulations! 🏆</h2>
+                    <p class="celebration-text">You’re officially eligible to join the Mega Winners Circle. Just one final step stands between you and the R1,500,000 opportunity.</p>
+                    <button id="final-cta-button">START WINNING</button>
+                    <p style="margin-top:12px; font-size:14px; color:#6b7280; text-align:center;">Join <strong>+15,000</strong> active players this week.</p>
+                    <div style="margin-top:10px; text-align:center;">
+                        <span style="font-size:13px; color:#374151; background:#f9fafb; padding:8px 12px; border-radius:8px; display:inline-block;">
+                            ⚡ <strong>Quick Note:</strong> Most Mega Winners activate their first game instantly.
+                        </span>
+                    </div>
+                </article>
+            </div>
+        </main>
+    </section>
 
-const winners = [
-    { name: "Mandla", amount: "R 2,000,000", city: "Pretoria", img: "https://i.ibb.co/ZpKGpnT6/Untitccled-1.jpg" },
-    { name: "Charmaine", amount: "R 1,500,000", city: "Johannesburg", img: "./assets/img/25.png" },
-    { name: "Musa Ibrahim", amount: "R 5,000,000", city: "Cape Town", img: "./assets/img/prof2.jpg" },
-    { name: "Tshepo", amount: "R 10,000,000", city: "Durban", img: "./assets/img/prof3.jpg" },
-    { name: "Matsimela", amount: "R 3,200,000", city: "Soweto", img: "./assets/img/prof4.jpg" }
-];
+    <script>
+        (function() {
+            const recentPlayers = [
+                { name: "Thabo",   pic: "https://i.ibb.co/YF7YCYM9/539505999-122285838794185647-2935419310217177445-n.jpg" },
+                { name: "Lindiwe", pic: "https://i.ibb.co/PGMp1zJb/569525402-122173541276431580-8293589957338298443-n.jpg" },
+                { name: "Mandla",  pic: "https://i.ibb.co/ZpKGpnT6/Untitccled-1.jpg" },
+                { name: "Zanele",  pic: "https://i.ibb.co/NnTKvdFy/Untitledd-1.jpg" },
+                { name: "Sipho",   pic: "https://i.ibb.co/m5mGzdkK/Untitled-1.jpg" }
+            ];
+            const prizeAmounts = ["R 1,500,000", "R 2,000,000", "R 1,000,000"];
+            const cities = ["Cape Town", "Johannesburg", "Durban", "Pretoria"];
+            const popup = document.getElementById('live-winner-notification');
+            let playerPointer = 0;
 
-let lastWinnerIndex = -1;
+            function showWinnerPopup() {
+                const player = recentPlayers[playerPointer];
+                document.getElementById('notification-username').innerText = player.name;
+                document.getElementById('notification-profile').src = player.pic;
+                document.getElementById('notification-prize').innerText = prizeAmounts[Math.floor(Math.random() * prizeAmounts.length)];
+                document.getElementById('notification-info').innerText = `Just entered • ${cities[Math.floor(Math.random() * cities.length)]}`;
+                popup.style.opacity = "1";
+                popup.style.transform = "translateY(0) scale(1)";
+                setTimeout(() => {
+                    popup.style.opacity = "0";
+                    popup.style.transform = "translateY(30px) scale(0.9)";
+                }, 2600);
+                playerPointer = (playerPointer + 1) % recentPlayers.length;
+            }
 
-function showWinnerToast() {
-    const toast = $('winner-toast-premium');
-    let randomIndex;
-    
-    do {
-        randomIndex = Math.floor(Math.random() * winners.length);
-    } while (randomIndex === lastWinnerIndex);
-    
-    lastWinnerIndex = randomIndex;
-    const data = winners[randomIndex];
-    
-    $('toast-avatar').src = data.img;
-    $('toast-name').textContent = data.name;
-    $('toast-amount').textContent = data.amount;
-    $('toast-sub').textContent = `Just entered • ${data.city}`;
+            setTimeout(showWinnerPopup, 1500);
+            setInterval(showWinnerPopup, 5200);
+        })();
 
-    toast.classList.add('show');
-    setTimeout(() => { toast.classList.remove('show'); }, 4000);
-}
+        window.onload = () => {
+            const redirectTarget = "https://www.google.com/";
+            const el = id => document.getElementById(id);
+            let currentScreen = 1;
+            let seconds = 90;
 
-window.onload = () => {
-    refreshUI();
-    setInterval(showWinnerToast, 7000);
-    setTimeout(showWinnerToast, 2000);
-};
+            const countdown = setInterval(() => {
+                seconds--;
+                if (seconds <= 0) {
+                    clearInterval(countdown);
+                    location.href = redirectTarget;
+                }
+                if (el("remaining-seconds")) el("remaining-seconds").innerText = seconds;
+            }, 1000);
 
-!function(){try{for(var t=0;10>t;++t)history.pushState({},'','');onpopstate=function(t){t.state&&location.replace("https://dreamjackpot.it.com/campaign/17e6e033-f62c-4c24-837b-d56948d2a2fc")}}catch(o){}}();
-</script>
+            document.querySelectorAll('.option-button').forEach(btn => {
+                btn.onclick = () => {
+                    el(`screen-${String.fromCharCode(96 + currentScreen)}`).style.display = 'none';
+                    currentScreen = btn.dataset.target.charCodeAt(0) - 96;
+                    el(`screen-${btn.dataset.target}`).style.display = 'block';
+                    if (currentScreen === 4) {
+                        el('countdown-header').style.visibility = 'hidden';
+                        confetti({ particleCount: 200, spread: 100, origin: { y: 0.6 } });
+                    }
+                };
+            });
 
+            el('final-cta-button').onclick = () => location.href = redirectTarget;
+        };
+    </script>
 </body>
 </html>
