@@ -30,7 +30,7 @@ body {
     color: var(--dark-ui);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+
     align-items: center;
     padding: 20px;
     overflow: hidden !important;
@@ -39,14 +39,16 @@ body {
 .global-topbar {
     width: 100%;
     background: transparent;
-    padding: 15px 20px;
+
     display: flex;
     justify-content: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    position: absolute;
+
     top: 0;
 }
-
+header.global-topbar {
+    margin-bottom: 5vh;
+}
 .topbar-inner {
     max-width: 1200px;
     width: 100%;
@@ -405,7 +407,7 @@ body {
 
 @media (max-width: 600px) {
     .primary-panel {
-        width: 100%;
+        width: 90vw;
         padding: 25px;
     }
 }
