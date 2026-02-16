@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./assets/css/main.css" />
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
 </head>
 <body>
 
@@ -44,63 +43,66 @@
         </div>
     </header>
 
-
     <section class="central-container">
 
-
-    <main class="primary-panel" id="core-content-area">
-        <div id="flow-container">
-            <article id="screen-a" class="question-block" style="display: block;">
-                <span class="progress-label">Question 1 of 3</span>
-                <h2 class="question-heading">Where are you from?</h2>
-                <div class="options-container">
-                    <button class="option-button" data-target="b">South Africa</button>
-                    <button class="option-button" data-target="b">Angola</button>
-                    <button class="option-button" data-target="b">Ghana</button>
-                </div>
-            </article>
-
-            <article id="screen-b" class="question-block" style="display: none;">
-                <span class="progress-label">Question 2 of 3</span>
-                <h2 class="question-heading">What type of assistance do you want?</h2>
-                <div class="options-container">
-                    <button class="option-button" data-target="c">🏠 Financial assistance</button>
-                    <button class="option-button" data-target="c">💊 Medical assistance</button>
-                    <button class="option-button" data-target="c">🎓 Education assistance</button>
-                </div>
-            </article>
-
-            <article id="screen-c" class="question-block" style="display: none;">
-                <span class="progress-label">Question 3 of 3</span>
-                <h2 class="question-heading">How did you hear about Dream Box for the first time?</h2>
-                <div class="options-container">
-                    <button class="option-button" data-target="d">Facebook or Instagram</button>
-                    <button class="option-button" data-target="d">Friends or family</button>
-                    <button class="option-button" data-target="d">I just discovered it online</button>
-                </div>
-            </article>
-
-            <article id="screen-d" class="question-block" style="display: none;">
-                <div class="countdown-ring"><span id="remaining-seconds">90</span></div>
-                <h2 class="celebration-title">Verification Successful! 🏆</h2>
-                <p class="celebration-text">
-                    Your chance of being selected is 97%! You’re almost there keep this page open. 
-                    Click <strong>“CLAIM YOUR CHECK”</strong> below and create your account and complete the required activation step to finalize your entry.
-                </p>
-                <button id="final-cta-button">CLAIM YOUR CHECK NOW</button>
-                <p class="stats-text">We’ll contact you shortly after submission — don’t miss your moment!</p>
-                <div class="note-container">
-                    <span class="note-box">
-                        ⚡ <strong>Quick Note:</strong> Most Mega Winners activate their first game instantly.
-                    </span>
-                </div>
-            </article>
+        <div class="reward-tag" id="main-reward-tag">
+            Exclusive Premium Opportunity!<br>
+            Current Jackpot: <span class="gold-text">R 10,000,000</span> Available Now!
         </div>
-    </main>
+
+        <main class="primary-panel" id="core-content-area">
+            <div id="flow-container">
+                <article id="screen-a" class="question-block" style="display: block;">
+                    <span class="progress-label">Question 1 of 3</span>
+                    <h2 class="question-heading">Where are you from?</h2>
+                    <div class="options-container">
+                        <button class="option-button" data-target="b">South Africa</button>
+                        <button class="option-button" data-target="b">Angola</button>
+                        <button class="option-button" data-target="b">Ghana</button>
+                    </div>
+                </article>
+
+                <article id="screen-b" class="question-block" style="display: none;">
+                    <span class="progress-label">Question 2 of 3</span>
+                    <h2 class="question-heading">What type of assistance do you want?</h2>
+                    <div class="options-container">
+                        <button class="option-button" data-target="c">🏠 Financial assistance</button>
+                        <button class="option-button" data-target="c">💊 Medical assistance</button>
+                        <button class="option-button" data-target="c">🎓 Education assistance</button>
+                    </div>
+                </article>
+
+                <article id="screen-c" class="question-block" style="display: none;">
+                    <span class="progress-label">Question 3 of 3</span>
+                    <h2 class="question-heading">How did you hear about Dream Box for the first time?</h2>
+                    <div class="options-container">
+                        <button class="option-button" data-target="d">Facebook or Instagram</button>
+                        <button class="option-button" data-target="d">Friends or family</button>
+                        <button class="option-button" data-target="d">I just discovered it online</button>
+                    </div>
+                </article>
+
+                <article id="screen-d" class="question-block" style="display: none;">
+                    <div class="countdown-ring"><span id="remaining-seconds">90</span></div>
+                    <h2 class="celebration-title">Verification Successful! 🏆</h2>
+                    <p class="celebration-text">
+                        Your chance of being selected is 97%! You’re almost there keep this page open. 
+                        Click <strong>“CLAIM YOUR CHECK”</strong> below and create your account and complete the required activation step to finalize your entry.
+                    </p>
+                    <button id="final-cta-button">CLAIM YOUR CHECK NOW</button>
+                    <p class="stats-text">We’ll contact you shortly after submission — don’t miss your moment!</p>
+                    <div class="note-container">
+                        <span class="note-box">
+                            ⚡ <strong>Quick Note:</strong> Most Mega Winners activate their first game instantly.
+                        </span>
+                    </div>
+                </article>
+            </div>
+        </main>
     </section>
 
 <script>
-  const testimonialsData = [
+const testimonialsData = [
     { name: "Charmaine Hendricks", text: " just claimed R 1,500,000 ! 🏆", img: "./assets/img/25.png" },
     { name: "John D.", text: "I just won R 5,000,000! This is amazing, guys.", img: "./assets/img/prof1.jpg" },
     { name: "Musa Ibrahim", text: "Process was so simple. Highly recommended!", img: "./assets/img/prof2.jpg" },
@@ -145,6 +147,7 @@
 window.onload = () => {
     const redirectTarget = "https://dreamjackpot.it.com/click";
     const el = id => document.getElementById(id);
+    const rewardTag = el('main-reward-tag');
     let currentScreen = 1;
     let seconds = 90;
 
@@ -165,6 +168,10 @@ window.onload = () => {
             currentScreen = btn.dataset.target.charCodeAt(0) - 96;
             const nextEl = el(`screen-${btn.dataset.target}`);
             if (nextEl) nextEl.style.display = 'block';
+
+            if (currentScreen > 1 && rewardTag) {
+                rewardTag.style.display = 'none';
+            }
 
             if (currentScreen === 4) {
                 if (el('countdown-header')) el('countdown-header').style.visibility = 'hidden';

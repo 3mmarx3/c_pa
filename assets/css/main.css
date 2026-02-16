@@ -439,3 +439,15 @@ header.global-topbar {
         font-size: 11px !important;
     }
 }
+
+.gold-text {
+    color: var(--main-tint);
+    margin-top: 5px;
+}
+
+.reward-tag {
+    text-align: center;
+    margin-bottom: 3vh;
+    font-size: larger;
+    color: white;
+}
