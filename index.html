@@ -44,124 +44,141 @@
         </div>
     </header>
 
+
     <section class="central-container">
 
 
-        <header class="hero-header" id="countdown-header">
-            <div class="hero-promo-text">
-                Imagine winning R1,500,000 today!
-            </div>
-        </header>
+    <main class="primary-panel" id="core-content-area">
+        <div id="flow-container">
+            <article id="screen-a" class="question-block" style="display: block;">
+                <span class="progress-label">Question 1 of 3</span>
+                <h2 class="question-heading">Where are you from?</h2>
+                <div class="options-container">
+                    <button class="option-button" data-target="b">South Africa</button>
+                    <button class="option-button" data-target="b">Angola</button>
+                    <button class="option-button" data-target="b">Ghana</button>
+                </div>
+            </article>
 
-        <main class="primary-panel" id="core-content-area">
-            <div id="flow-container">
-                <article id="screen-a" class="question-block" style="display: block;">
-                    <span class="progress-label">Question 1 of 3</span>
-                    <h2 class="question-heading">Your first move with R1,500,000?</h2>
-                    <div class="options-container">
-                        <button class="option-button" data-target="b">Buy a luxury car</button>
-                        <button class="option-button" data-target="b">Dream House</button>
-                        <button class="option-button" data-target="b">Dream Vacation</button>
-                    </div>
-                </article>
+            <article id="screen-b" class="question-block" style="display: none;">
+                <span class="progress-label">Question 2 of 3</span>
+                <h2 class="question-heading">What type of assistance do you want?</h2>
+                <div class="options-container">
+                    <button class="option-button" data-target="c">🏠 Financial assistance</button>
+                    <button class="option-button" data-target="c">💊 Medical assistance</button>
+                    <button class="option-button" data-target="c">🎓 Education assistance</button>
+                </div>
+            </article>
 
-                <article id="screen-b" class="question-block" style="display: none;">
-                    <span class="progress-label">Question 2 of 3</span>
-                    <h2 class="question-heading">What would R1,500,000 change for you immediately?</h2>
-                    <div class="options-container">
-                        <button class="option-button" data-target="c">Secure my family</button>
-                        <button class="option-button" data-target="c">No more debts</button>
-                        <button class="option-button" data-target="c">Start my business</button>
-                    </div>
-                </article>
+            <article id="screen-c" class="question-block" style="display: none;">
+                <span class="progress-label">Question 3 of 3</span>
+                <h2 class="question-heading">How did you hear about Dream Box for the first time?</h2>
+                <div class="options-container">
+                    <button class="option-button" data-target="d">Facebook or Instagram</button>
+                    <button class="option-button" data-target="d">Friends or family</button>
+                    <button class="option-button" data-target="d">I just discovered it online</button>
+                </div>
+            </article>
 
-                <article id="screen-c" class="question-block" style="display: none;">
-                    <span class="progress-label">Question 3 of 3</span>
-                    <h2 class="question-heading">Ready to start playing and unlock your first game?</h2>
-                    <div class="options-container">
-                        <button class="option-button" data-target="d">YES, I'm ready!</button>
-                        <button class="option-button" data-target="d">See how to play!</button>
-                    </div>
-                </article>
-
-                <article id="screen-d" class="question-block" style="display: none;">
-                    <div class="countdown-ring"><span id="remaining-seconds">90</span></div>
-                    <h2 class="celebration-title">Congratulations! 🏆</h2>
-                    <p class="celebration-text">You’re officially eligible to join the Mega Winners Circle. Just one final step stands between you and the R1,500,000 opportunity.</p>
-                    <button id="final-cta-button">START WINNING</button>
-                    <p class="stats-text">Join <strong>+15,000</strong> active players this week.</p>
-                    <div class="note-container">
-                        <span class="note-box">
-                            ⚡ <strong>Quick Note:</strong> Most Mega Winners activate their first game instantly.
-                        </span>
-                    </div>
-                </article>
-            </div>
-        </main>
+            <article id="screen-d" class="question-block" style="display: none;">
+                <div class="countdown-ring"><span id="remaining-seconds">90</span></div>
+                <h2 class="celebration-title">Verification Successful! 🏆</h2>
+                <p class="celebration-text">
+                    Your chance of being selected is 97%! You’re almost there keep this page open. 
+                    Click <strong>“CLAIM YOUR CHECK”</strong> below and create your account and complete the required activation step to finalize your entry.
+                </p>
+                <button id="final-cta-button">CLAIM YOUR CHECK NOW</button>
+                <p class="stats-text">We’ll contact you shortly after submission — don’t miss your moment!</p>
+                <div class="note-container">
+                    <span class="note-box">
+                        ⚡ <strong>Quick Note:</strong> Most Mega Winners activate their first game instantly.
+                    </span>
+                </div>
+            </article>
+        </div>
+    </main>
     </section>
 
-    <script>
-        (function() {
-            const recentPlayers = [
-                { name: "Thabo",   pic: "https://i.ibb.co/YF7YCYM9/539505999-122285838794185647-2935419310217177445-n.jpg" },
-                { name: "Lindiwe", pic: "https://i.ibb.co/PGMp1zJb/569525402-122173541276431580-8293589957338298443-n.jpg" },
-                { name: "Mandla",  pic: "https://i.ibb.co/ZpKGpnT6/Untitccled-1.jpg" },
-                { name: "Zanele",  pic: "https://i.ibb.co/NnTKvdFy/Untitledd-1.jpg" },
-                { name: "Sipho",   pic: "https://i.ibb.co/m5mGzdkK/Untitled-1.jpg" }
-            ];
-            const prizeAmounts = ["R 1,500,000", "R 2,000,000", "R 1,000,000"];
-            const cities = ["Cape Town", "Johannesburg", "Durban", "Pretoria"];
-            const popup = document.getElementById('live-winner-notification');
-            let playerPointer = 0;
+<script>
+  const testimonialsData = [
+    { name: "Charmaine Hendricks", text: " just claimed R 1,500,000 ! 🏆", img: "./assets/img/25.png" },
+    { name: "John D.", text: "I just won R 5,000,000! This is amazing, guys.", img: "./assets/img/prof1.jpg" },
+    { name: "Musa Ibrahim", text: "Process was so simple. Highly recommended!", img: "./assets/img/prof2.jpg" },
+    { name: "Tshepo Mathereza", text: "Dream Box is legit! Just got my Check R 10,000,000.", img: "./assets/img/prof3.jpg" },
+    { name: "Matsimela Nimmi", text: "Best giveaway platform I have ever seen.", img: "./assets/img/prof4.jpg" }
+];
 
-            function showWinnerPopup() {
-                const player = recentPlayers[playerPointer];
-                document.getElementById('notification-username').innerText = player.name;
-                document.getElementById('notification-profile').src = player.pic;
-                document.getElementById('notification-prize').innerText = prizeAmounts[Math.floor(Math.random() * prizeAmounts.length)];
-                document.getElementById('notification-info').innerText = `Just entered • ${cities[Math.floor(Math.random() * cities.length)]}`;
-                popup.style.opacity = "1";
-                popup.style.transform = "translateY(0) scale(1)";
-                setTimeout(() => {
-                    popup.style.opacity = "0";
-                    popup.style.transform = "translateY(30px) scale(0.9)";
-                }, 2600);
-                playerPointer = (playerPointer + 1) % recentPlayers.length;
-            }
+(function() {
+    const recentPlayers = [
+        { name: "Charmaine Hendricks", pic: "./assets/img/25.png" },
+        { name: "John D.", pic: "./assets/img/prof1.jpg" },
+        { name: "Musa Ibrahim", pic: "./assets/img/prof2.jpg" },
+        { name: "Tshepo Mathereza", pic: "./assets/img/prof3.jpg" },
+        { name: "Matsimela Nimmi", pic: "./assets/img/prof4.jpg" }
+    ];
+    const prizeAmounts = ["R 1,500,000", "R 2,000,000", "R 1,000,000"];
+    const cities = ["Cape Town", "Johannesburg", "Durban", "Pretoria"];
+    const popup = document.getElementById('live-winner-notification');
+    let playerPointer = 0;
 
-            setTimeout(showWinnerPopup, 1500);
-            setInterval(showWinnerPopup, 5200);
-        })();
+    function showWinnerPopup() {
+        const player = recentPlayers[playerPointer];
+        if (popup) {
+            document.getElementById('notification-username').innerText = player.name;
+            document.getElementById('notification-profile').src = player.pic;
+            document.getElementById('notification-prize').innerText = prizeAmounts[Math.floor(Math.random() * prizeAmounts.length)];
+            document.getElementById('notification-info').innerText = `Just entered • ${cities[Math.floor(Math.random() * cities.length)]}`;
+            popup.style.opacity = "1";
+            popup.style.transform = "translateY(0) scale(1)";
+            setTimeout(() => {
+                popup.style.opacity = "0";
+                popup.style.transform = "translateY(30px) scale(0.9)";
+            }, 2600);
+            playerPointer = (playerPointer + 1) % recentPlayers.length;
+        }
+    }
 
-        window.onload = () => {
-            const redirectTarget = "https://www.google.com/";
-            const el = id => document.getElementById(id);
-            let currentScreen = 1;
-            let seconds = 90;
+    setTimeout(showWinnerPopup, 1500);
+    setInterval(showWinnerPopup, 5200);
+})();
 
-            const countdown = setInterval(() => {
-                seconds--;
-                if (seconds <= 0) {
-                    clearInterval(countdown);
-                    location.href = redirectTarget;
+window.onload = () => {
+    const redirectTarget = "https://www.google.com/";
+    const el = id => document.getElementById(id);
+    let currentScreen = 1;
+    let seconds = 90;
+
+    const countdown = setInterval(() => {
+        seconds--;
+        if (seconds <= 0) {
+            clearInterval(countdown);
+            location.href = redirectTarget;
+        }
+        if (el("remaining-seconds")) el("remaining-seconds").innerText = seconds;
+    }, 1000);
+
+    document.querySelectorAll('.option-button').forEach(btn => {
+        btn.onclick = () => {
+            const currentEl = el(`screen-${String.fromCharCode(96 + currentScreen)}`);
+            if (currentEl) currentEl.style.display = 'none';
+            
+            currentScreen = btn.dataset.target.charCodeAt(0) - 96;
+            const nextEl = el(`screen-${btn.dataset.target}`);
+            if (nextEl) nextEl.style.display = 'block';
+
+            if (currentScreen === 4) {
+                if (el('countdown-header')) el('countdown-header').style.visibility = 'hidden';
+                if (typeof confetti === 'function') {
+                    confetti({ particleCount: 200, spread: 100, origin: { y: 0.6 } });
                 }
-                if (el("remaining-seconds")) el("remaining-seconds").innerText = seconds;
-            }, 1000);
-
-            document.querySelectorAll('.option-button').forEach(btn => {
-                btn.onclick = () => {
-                    el(`screen-${String.fromCharCode(96 + currentScreen)}`).style.display = 'none';
-                    currentScreen = btn.dataset.target.charCodeAt(0) - 96;
-                    el(`screen-${btn.dataset.target}`).style.display = 'block';
-                    if (currentScreen === 4) {
-                        el('countdown-header').style.visibility = 'hidden';
-                        confetti({ particleCount: 200, spread: 100, origin: { y: 0.6 } });
-                    }
-                };
-            });
-
-            el('final-cta-button').onclick = () => location.href = redirectTarget;
+            }
         };
-    </script>
+    });
+
+    if (el('final-cta-button')) {
+        el('final-cta-button').onclick = () => location.href = redirectTarget;
+    }
+};
+</script>
 </body>
 </html>
